@@ -81,9 +81,9 @@
 </p>
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&customColorList=000000,005f73,0a9396,94d2bd,e9d8a6&height=100&section=footer" width="100%"/>
+  <img src="https://komarev.com/ghpvc/?username=sahilydv-1610&label=Profile%20Views&color=00B4D8&style=for-the-badge" alt="Profile Views" />
 </p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sahilydv-1610&label=Profile%20Views&color=00B4D8&style=for-the-badge" alt="Profile Views" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&customColorList=000000,005f73,0a9396,94d2bd,e9d8a6&height=100&section=footer" width="100%"/>
 </p>
