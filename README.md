@@ -1,5 +1,5 @@
 <!-- Animated Capsule Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Engineer&descAlignY=55&descAlign=50" width="100%"/>
 
 <p align="center">
   <img src="https://camo.githubusercontent.com/dd237b558739902670df3b0af1212e3f569cf70a75710fd4d0201b961e12d267/68747470733a2f2f692e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a457861334e79633235796347313263474a7a62334272636a467365545179616e4e7a6257316d646e4a685a7a4a6d4e4770766147733364435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f4c3152317476493973766b495777705659722f67697068792e676966" alt="Coding on PC" width="400" />
@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=535&lines=CSE+Student+%40+Lovely+Professional+Uni;Transforming+Ideas+Into+Web+Apps;Modern+JavaScript+%26+React+Developer;Passionate+about+Animations+%26+Clean+Code" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=535&lines=Transforming+Ideas+Into+Scalable+Web+Apps;Full-Stack+Developer+%7C+React+%26+Node.js+Enthusiast;Building+AI-Powered+and+Real-Time+Applications;Focused+on+Clean+Code%2C+Performance+%26+User+Experience" alt="Typing SVG" />
   </a>
 </p>
 
