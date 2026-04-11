@@ -16,7 +16,7 @@
 </p>
 
 <!-- Animated Gradient Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ### ✨ Quick Facts About Me:
 - 🔭 I’m currently building robust, full-stack **React & Node** applications.
@@ -25,7 +25,7 @@
 - 💼 I am actively contributing to open-source and refining my portfolio projects.
 - ⚡ Fun Fact: When not coding, I'm probably optimizing my LeetCode solutions or exploring new web design trends!
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ### 🛠️ Tech Stack & Languages (Honeycomb):
 <p align="center">
@@ -42,31 +42,31 @@
   </a>
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ### 📊 GitHub Trophies & Stats:
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=sahilydv-1610&theme=radical&no-frame=true&no-bg=true&margin-w=15" />
+  <img src="https://github-profile-trophy.vercel.app/?username=sahilydv-1610&theme=radical&no-frame=true&no-bg=true&margin-w=15&v=1" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=sahilydv-1610&show_icons=true&theme=dark&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&icon_color=3fb950" height="192px"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sahilydv-1610&layout=compact&theme=dark&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9" height="192px"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=sahilydv-1610&show_icons=true&theme=dark&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&icon_color=3fb950&v=1" height="192px"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=sahilydv-1610&layout=compact&theme=dark&bg_color=0d1117&border_color=30363d&title_color=58a6ff&text_color=c9d1d9&v=1" height="192px"/>
 </p>
 
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=sahilydv-1610&theme=dark&background=0d1117&border=30363d&dates=c9d1d9&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9" height="192px"/>
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ### 🌟 Daily Motivation:
 <p align="center">
   <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
 </p>
 
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+---
 
 ### 📬 Connect with me:
 <p align="center">
