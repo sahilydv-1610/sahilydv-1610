@@ -1,4 +1,3 @@
-<!-- Animated Capsule Header -->
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
 
 <p align="center">
@@ -22,7 +21,12 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vite,redux,tailwind,bootstrap,materialui,nodejs,express,nestjs,php,laravel,python,django,cpp,java,spring,c,dotnet,go,rust,aws,azure,gcp,firebase,supabase,mysql,mongodb,postgresql,redis,git,github,gitlab,docker,kubernetes,linux,ubuntu,windows,postman,graphql,nginx,vscode,visualstudio,idea,figma,vercel,netlify&theme=dark&perline=12" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vite&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=redux,tailwind,bootstrap,materialui,nodejs,express,nestjs,php&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=laravel,python,django,cpp,java,spring,c,dotnet,go&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=rust,aws,azure,gcp,firebase,supabase,mysql,mongodb,postgresql,redis&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,kubernetes,linux,ubuntu,windows,postman&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=graphql,nginx,vscode,visualstudio,idea,figma,vercel,netlify&theme=dark" />
   </a>
 </p>
 
