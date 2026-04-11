@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahil - GitHub Profile Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent-color: #58a6ff;
+            --success-color: #238636;
+            --success-hover: #2ea043;
+            
+            --glass-bg: rgba(22, 27, 34, 0.6);
+            --glass-border: rgba(48, 54, 61, 0.5);
+            --gradient-accent: linear-gradient(135deg, #58a6ff 0%, #3fb950 100%);
+            --glow: 0 0 20px rgba(88, 166, 255, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Animated Background Particles */
+        .bg-particles {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(88, 166, 255, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: float 20s infinite ease-in-out alternate;
+        }
+
+        .particle:nth-child(1) { width: 600px; height: 600px; top: -10%; left: -10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 800px; height: 800px; bottom: -20%; right: -10%; background: radial-gradient(circle, rgba(63, 185, 80, 0.1) 0%, transparent 70%); animation-delay: -5s; }
+        .particle:nth-child(3) { width: 400px; height: 400px; top: 40%; left: 60%; background: radial-gradient(circle, rgba(163, 113, 247, 0.1) 0%, transparent 70%); animation-duration: 25s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(50px, 30px) scale(1.1); }
+            100% { transform: translate(-20px, -50px) scale(0.9); }
+        }
+
+        /* Top Navbar */
+        nav {
+            background-color: rgba(22, 27, 34, 0.8);
+            padding: 16px 32px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 32px;
+            margin-right: 16px;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), text-shadow 0.3s;
+        }
+
+        nav .logo:hover {
+            transform: scale(1.15) rotate(15deg);
+            text-shadow: 0 0 15px rgba(255,255,255,0.6);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1280px;
+            margin: 32px auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 296px 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+        }
+
+        /* Sidebar / Profile */
+        .sidebar {
+            animation: slideInLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            opacity: 0;
+        }
+
+        .avatar-container {
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+            width: 296px;
+            height: 296px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+            box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px var(--border-color);
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 2;
+            padding: 4px;
+            background: linear-gradient(145deg, #161b22, #0d1117);
+        }
+
+        .avatar-container:hover .avatar {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px var(--bg-color), 0 0 0 4px transparent, 0 0 25px rgba(88, 166, 255, 0.5);
+            transform: scale(1.03);
+            background: var(--gradient-accent);
+        }
+
+        /* Animated connection status */
+        .status-badge {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 3;
+            transition: transform 0.3s;
+            cursor: default;
+        }
+
+        .status-badge:hover {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 16px;
+        }
+
+        .username {
+            font-size: 20px;
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-bottom: 16px;
+        }
+
+        .bio {
+            font-size: 16px;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 6px 16px;
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            width: 300%; height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 10.01%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s;
+            border-radius: 50%;
+        }
+
+        .btn:hover {
+            background-color: #1f2428;
+            border-color: var(--text-secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .info-list {
+            list-style: none;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s, color 0.2s;
+        }
+
+        .info-list li:hover {
+            transform: translateX(5px);
+            color: #fff;
+        }
+
+        .info-list i {
+            color: var(--text-secondary);
+            width: 16px;
+            text-align: center;
+            transition: color 0.2s;
+        }
+
+        .info-list li:hover i {
+            color: var(--accent-color);
+        }
+
+        /* Main Content */
+        .main-content {
+            animation: slideInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            opacity: 0;
+            animation-delay: 0.2s;
+        }
+
+        /* Profile README Section */
+        .profile-readme {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            margin-bottom: 32px;
+            background: var(--card-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .readme-header {
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 12px 24px;
+            border-bottom: 1px solid var(--border-color);
+            background: rgba(13, 17, 23, 0.5);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .readme-content {
+            padding: 32px;
+            position: relative;
+        }
+
+        .readme-content::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+            animation: scanningLine 3s linear infinite;
+        }
+
+        @keyframes scanningLine {
+            0% { transform: translateX(-100%); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%); opacity: 0; }
+        }
+
+        .typewriter {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid var(--accent-color);
+            width: 0;
+            animation: typing 2.5s steps(30, end) forwards, blink 1s step-end infinite;
+        }
+
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink { 50% { border-color: transparent } }
+
+        .about-text {
+            color: var(--text-primary);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeIn 1s forwards 2.5s;
+        }
+
+        .about-text ul {
+            list-style-type: none;
+            margin-top: 12px;
+        }
+
+        .about-text li {
+            margin-bottom: 8px;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .about-text li::before {
+            content: '🚀';
+            position: absolute;
+            left: 0;
+            font-size: 14px;
+        }
+
+        /* Marquee Animation */
+        .marquee-section {
+            opacity: 0;
+            animation: fadeInUp 1s forwards 3s;
+            margin-top: 24px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+        }
+
+        .marquee-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            position: relative;
+            padding: 10px 0;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-container:hover .marquee-content {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            margin-right: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .marquee-item:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: rgba(255,255,255,0.1);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(88, 166, 255, 0.2);
+            color: #fff;
+        }
+
+        .lang-icon { font-size: 18px; }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } 
+        }
+
+        /* Pinned Repositories */
+        .section-title {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pinned-repos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .repo-card {
+            padding: 16px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            opacity: 0;
+        }
+
+        .repo-card.animate-in {
+            animation: fadeInUp 0.6s forwards;
+        }
+
+        .repo-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 3px; height: 100%;
+            background: var(--accent-color);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: bottom;
+        }
+
+        .repo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5), 0 0 15px rgba(88, 166, 255, 0.15);
+            border-color: rgba(88, 166, 255, 0.3);
+            background: rgba(30, 36, 45, 0.8);
+        }
+
+        .repo-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .repo-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .repo-title a { color: var(--accent-color); text-decoration: none; position: relative;}
+        .repo-title a::after {
+            content: ''; position: absolute; width: 100%; transform: scaleX(0); height: 1px;
+            bottom: 0; left: 0; background-color: var(--accent-color); transform-origin: bottom right; transition: transform 0.25s ease-out;
+        }
+        .repo-title a:hover::after { transform: scaleX(1); transform-origin: bottom left; }
+
+        .badge {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 2em;
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .repo-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .repo-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .lang-color {
+            width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right:4px;
+        }
+        .js-color { background-color: #f1e05a; }
+
+        /* Contribution Heatmap */
+        .contributions-panel {
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 16px;
+            margin-top: 32px;
+            background: var(--card-bg);
+            opacity: 0;
+            animation: fadeInUp 0.8s backwards 1.5s forwards; /* Will be triggered by JS intersection or delay */
+        }
+
+        .heatmap-container { display: flex; flex-direction: column; gap: 4px; overflow-x: auto; padding-bottom: 8px; }
+        .heatmap-grid { display: grid; grid-template-rows: repeat(7, 12px); grid-auto-columns: 12px; grid-auto-flow: column; gap: 3px; }
+        .heatmap-cell { width: 12px; height: 12px; border-radius: 2px; background-color: #161b22; outline: 1px solid rgba(255,255,255,0.02); transition: all 0.2s ease; cursor: pointer; }
+        .heatmap-cell:hover { transform: scale(1.4); z-index: 10; box-shadow: 0 0 8px rgba(0,0,0,0.8); outline-color: rgba(255,255,255,0.3); border-radius:3px; }
+
+        .heatmap-cell[data-level="0"] { background-color: #161b22; }
+        .heatmap-cell[data-level="1"] { background-color: #0e4429; }
+        .heatmap-cell[data-level="2"] { background-color: #006d32; }
+        .heatmap-cell[data-level="3"] { background-color: #26a641; }
+        .heatmap-cell[data-level="4"] { background-color: #39d353; box-shadow: 0 0 3px #39d353; }
+
+        /* Animations */
+        @keyframes slideInLeft { from { transform: translateX(-50px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes slideInUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fadeInUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <nav>
+        <i class="fab fa-github logo"></i>
+        <div style="font-weight: 600; color: #fff;">Github Profile Clone <span style="font-size: 12px; color: var(--text-secondary); margin-left: 8px; font-weight: 400; padding: 2px 8px; border-radius: 12px; border: 1px solid var(--border-color);">Animated Edition</span></div>
+    </nav>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="avatar-container">
+                <!-- Using real GitHub avatar based on username -->
+                <img src="https://avatars.githubusercontent.com/sahilydv-1610" alt="Sahil" class="avatar">
+                <div class="status-badge" title="Focusing on shipping code!">&#128522;</div>
+            </div>
+            
+            <h1 class="name">Sahil</h1>
+            <h2 class="username">sahilydv-1610 &middot; he/him</h2>
+            
+            <p class="bio">
+                CSE Student | Full Stack Developer<br>
+                Building scalable web apps using HTML, CSS, JavaScript, PHP & MySQL Passionate about clean code, problem solving & real
+            </p>
+            
+            <button class="btn">Edit profile</button>
+            
+            <ul class="info-list" style="margin-bottom: 16px;">
+                <li><i class="fas fa-users"></i> <b>0</b> <span class="text-secondary">followers</span> &middot; <b>1</b> <span class="text-secondary">following</span></li>
+            </ul>
+
+            <ul class="info-list">
+                <li><i class="fas fa-map-marker-alt"></i> <span>Lovely Professional University</span></li>
+                <li><i class="far fa-clock"></i> <span>03:33 <span style="color:var(--text-secondary);">(UTC +05:30)</span></span></li>
+                <li><i class="fas fa-link"></i> <a href="https://sahil-portfolio-new-rust.vercel.app/" target="_blank" style="color: var(--text-primary); text-decoration: none;">sahil-portfolio-new-rust.vercel.app</a></li>
+                <li><i class="fab fa-linkedin"></i> <a href="#" style="color: var(--text-primary); text-decoration: none;">in/sahil-sahil-236482251</a></li>
+                <li><i class="fab fa-twitter"></i> <a href="#" style="color: var(--text-primary); text-decoration: none;">@Sahilyd97117696</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Workspace Area -->
+        <main class="main-content">
+            
+            <!-- README Section / About me -->
+            <div class="profile-readme">
+                <div class="readme-header">
+                    sahilydv-1610 / <b>README.md</b> <i class="fas fa-pen" style="margin-left:auto; cursor:pointer;"></i>
+                </div>
+                <div class="readme-content">
+                    <h2 class="typewriter">Hi there, I'm Sahil 👋</h2>
+                    
+                    <div class="about-text">
+                        <p>I'm a passionate CSE Student & Full Stack Developer who loves transforming ideas into scalable web applications. My focus is on writing clean, efficient code and solving real-world problems through innovative digital experiences.</p>
+                        
+                        <ul>
+                            <li>🔭 I’m currently building robust, full-stack React & Node applications.</li>
+                            <li>🌱 I’m continuously mastering modern JavaScript environments and advanced web animations.</li>
+                            <li>💡 I love integrating AI into web platforms (like Gemini!).</li>
+                            <li>⚡ Fact: When not coding, I'm probably optimizing my LeetCode solutions.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Learn Languages / Marquee Animation -->
+                    <div class="marquee-section">
+                        <div class="marquee-title">My Tech Stack & Learned Languages</div>
+                        <div class="marquee-container">
+                            <div class="marquee-content" id="marqueeContent">
+                                <!-- Marquee items injected via JS for seamless looping -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title" style="display: flex; justify-content: space-between; align-items: center; color: var(--text-primary);">
+                <span>Pinned</span>
+                <span style="font-size: 14px; color: var(--text-secondary); cursor: pointer;">Customize your pins</span>
+            </div>
+
+            <!-- Repositories Grid -->
+            <div class="pinned-repos">
+                <!-- Repo 1: ChitChat -->
+                <div class="repo-card">
+                    <div class="repo-title">
+                        <i class="far fa-map" style="color: var(--text-secondary)"></i>
+                        <a href="#">ChitChat</a>
+                        <span class="badge">Public</span>
+                        <i class="fas fa-ellipsis-h" style="margin-left: auto; color: var(--text-secondary)"></i>
+                    </div>
+                    <p class="repo-desc">
+                        <!-- Description normally goes here, but matching screenshot layout which is empty/short -->
+                    </p>
+                    <div class="repo-meta">
+                        <span><span class="lang-color js-color"></span> JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Repo 2: VideoDownloader -->
+                <div class="repo-card">
+                    <div class="repo-title">
+                        <i class="far fa-map" style="color: var(--text-secondary)"></i>
+                        <a href="#">VideoDownloader</a>
+                        <span class="badge">Public</span>
+                        <i class="fas fa-ellipsis-h" style="margin-left: auto; color: var(--text-secondary)"></i>
+                    </div>
+                    <p class="repo-desc"></p>
+                    <div class="repo-meta">
+                        <span><span class="lang-color js-color"></span> JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Repo 3: Sahil-Portfolio-New -->
+                <div class="repo-card">
+                    <div class="repo-title">
+                        <i class="far fa-map" style="color: var(--text-secondary)"></i>
+                        <a href="#">Sahil-Portfolio-New</a>
+                        <span class="badge">Public</span>
+                        <i class="fas fa-ellipsis-h" style="margin-left: auto; color: var(--text-secondary)"></i>
+                    </div>
+                    <p class="repo-desc"></p>
+                    <div class="repo-meta">
+                        <span><span class="lang-color js-color"></span> JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Repo 4: GrowGreen -->
+                <div class="repo-card">
+                    <div class="repo-title">
+                        <i class="far fa-map" style="color: var(--text-secondary)"></i>
+                        <a href="#">mohitparmar0602/GrowGreen</a>
+                        <span class="badge">Public</span>
+                        <i class="fas fa-ellipsis-h" style="margin-left: auto; color: var(--text-secondary)"></i>
+                    </div>
+                    <p class="repo-desc"></p>
+                    <div class="repo-meta">
+                        <span><span class="lang-color js-color"></span> JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contributions Heatmap -->
+            <div class="contributions-panel" id="contributions">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; color: var(--text-primary);">
+                    <span>116 contributions in the last year</span>
+                    <span style="color: var(--text-secondary); cursor: pointer;">Contribution settings <i class="fas fa-caret-down"></i></span>
+                </div>
+                
+                <div class="heatmap-container">
+                    <div class="heatmap-grid" id="heatmap">
+                        <!-- Squares generated by JS -->
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 12px; color: var(--text-secondary);">
+                    <a href="#" style="color: var(--text-secondary); text-decoration: none;">Learn how we count contributions</a>
+                    <div style="display: flex; align-items: center; gap: 4px;">
+                        Less 
+                        <div style="display: flex; gap: 3px; margin: 0 4px;">
+                            <span class="heatmap-cell" data-level="0"></span>
+                            <span class="heatmap-cell" data-level="1"></span>
+                            <span class="heatmap-cell" data-level="2"></span>
+                            <span class="heatmap-cell" data-level="3"></span>
+                            <span class="heatmap-cell" data-level="4"></span>
+                        </div>
+                        More
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Init Marquee Animation ---
+            const skills = [
+                { name: 'HTML5', icon: 'fab fa-html5', color: '#E34F26' },
+                { name: 'CSS3', icon: 'fab fa-css3-alt', color: '#1572B6' },
+                { name: 'JavaScript', icon: 'fab fa-js', color: '#F7DF1E' },
+                { name: 'React', icon: 'fab fa-react', color: '#61DAFB' },
+                { name: 'PHP', icon: 'fab fa-php', color: '#777BB4' },
+                { name: 'MySQL', icon: 'fas fa-database', color: '#4479A1' },
+                { name: 'Node.js', icon: 'fab fa-node', color: '#339933' },
+                { name: 'Git', icon: 'fab fa-git-alt', color: '#F05032' },
+                { name: 'TailwindCSS', icon: 'fas fa-wind', color: '#38B2AC' }
+            ];
+
+            const marqueeContent = document.getElementById('marqueeContent');
+            
+            // Function to build HTML for skills
+            const buildSkillsHTML = () => {
+                return skills.map(skill => `
+                    <div class="marquee-item">
+                        <i class="${skill.icon} lang-icon" style="color: ${skill.color};"></i>
+                        <span>${skill.name}</span>
+                    </div>
+                `).join('');
+            };
+
+            // Duplicate content for seamless marquee loop (Total 2 times)
+            marqueeContent.innerHTML = buildSkillsHTML() + buildSkillsHTML();
+
+            // --- 2. Staggered Animation for Repo Cards ---
+            const cards = document.querySelectorAll('.repo-card');
+            cards.forEach((card, index) => {
+                // Add delay sequentially
+                card.style.animationDelay = `${3.2 + (index * 0.15)}s`;
+                // Add class that triggers the animation
+                card.classList.add('animate-in');
+            });
+
+            // --- 3. Generate heatmap Data ---
+            const heatmapGrid = document.getElementById('heatmap');
+            const weeks = 52;
+            const daysPerWeek = 7;
+            const totalCells = weeks * daysPerWeek;
+            
+            for (let i = 0; i < totalCells; i++) {
+                const cell = document.createElement('div');
+                cell.className = 'heatmap-cell';
+                
+                // Generating pattern matching 116 contributions (mostly sparse)
+                let level = 0;
+                const rand = Math.random();
+                
+                // Set animation for heatmap cells
+                cell.style.animation = `fadeCell 0.5s backwards ${(i/totalCells)*0.8 + 3.5}s`;
+                
+                // Emulate github realistic recent activity
+                if (i > totalCells - 60) {
+                    // Recent activity higher probability mapped to his screenshot
+                    if (rand > 0.8) level = 4;
+                    else if (rand > 0.6) level = 3;
+                    else if (rand > 0.4) level = 2;
+                    else if (rand > 0.2) level = 1;
+                } else if(rand > 0.95) {
+                    level = Math.floor(Math.random() * 4) + 1;
+                }
+
+                cell.setAttribute('data-level', level);
+                heatmapGrid.appendChild(cell);
+            }
+
+            // Dynamic cell keyframe
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeCell {
+                    0% { transform: scale(0); opacity: 0; }
+                    80% { transform: scale(1.2); opacity: 1; }
+                    100% { transform: scale(1); opacity: 1; }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
