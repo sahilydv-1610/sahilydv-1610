@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
 
 <p align="center">
-  <img src="https://camo.githubusercontent.com/dd237b558739902670df3b0af1212e3f569cf70a75710fd4d0201b961e12d267/68747470733a2f2f692e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a457861334e79633235796347313263474a7a62334272636a467365545179616e4e7a6257316d646e4a685a7a4a6d4e4770766147733364435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f4c3152317476493973766b495777705659722f67697068792e676966" alt="Coding on PC" width="300" />
+  <img src="https://camo.githubusercontent.com/dd237b558739902670df3b0af1212e3f569cf70a75710fd4d0201b961e12d267/68747470733a2f2f692e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a457861334e79633235796347313263474a7a62334272636a467365545179616e4e7a6257316d646e4a685a7a4a6d4e4770766147733364435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f4c3152317476493973766b495777705659722f67697068792e676966" alt="Coding on PC" width="400" />
 </p>
 
 <p align="center">
@@ -21,12 +21,15 @@
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vite&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=redux,tailwind,bootstrap,materialui,nodejs,express,nestjs,php&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=laravel,python,django,cpp,java,spring,c,dotnet,go&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=rust,aws,azure,gcp,firebase,supabase,mysql,mongodb,postgresql,redis&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=git,github,gitlab,docker,kubernetes,linux,ubuntu,windows,postman&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=graphql,nginx,vscode,visualstudio,idea,figma,vercel,netlify&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=nextjs,vite,redux,tailwind,bootstrap,materialui&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=jquery,sass,less,webpack,babel,yarn,npm&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,php,laravel,python,django,cpp&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=java,spring,c,dotnet,go,rust,aws,azure,gcp&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=firebase,supabase,mysql,mongodb,postgresql,redis,git,github&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=gitlab,githubactions,docker,kubernetes,linux,ubuntu,windows&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=nginx,postman,graphql,vscode,visualstudio,idea&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=figma,md,vercel,netlify,angular&theme=dark" />
   </a>
 </p>
 
