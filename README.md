@@ -33,18 +33,7 @@
   <img src="https://streak-stats.demolab.com?user=sahilydv-1610&theme=dark&background=0d1117&border=30363d&dates=c9d1d9&ring=58a6ff&fire=58a6ff&currStreakNum=c9d1d9" height="192px"/>
 </p>
 
-### 🏗️ Active Projects:
-- **VideoDownloader React**: A sleek media downloader featuring premium UI animations.
-- **CodeGPT AI Assistant**: A multimodal conversational interface integrated with Gemini.
-- **GrowGreen**: Ongoing collaborative full-stack application focused on sustainability.
-- **ChitChat**: Real-time communication messaging platform.
 
-### 📬 Connect with me:
-- **📝 Portfolio**: [Visit My Live Portfolio](https://sahil-portfolio-new-rust.vercel.app/)
-- **👔 LinkedIn**: [in/sahil-sahil-236482251](https://linkedin.com/in/sahil-sahil-236482251)
-- **🐦 Twitter**: [@Sahilyd97117696](https://twitter.com/Sahilyd97117696)
-
----
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=100&section=footer" width="100%"/>
 </p>
