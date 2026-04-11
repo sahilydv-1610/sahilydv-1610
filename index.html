@@ -529,6 +529,29 @@
         .heatmap-cell[data-level="3"] { background-color: #26a641; }
         .heatmap-cell[data-level="4"] { background-color: #39d353; box-shadow: 0 0 3px #39d353; }
 
+        /* Hexagon Honeycomb Skills */
+        .honeycomb {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            padding: 8px 0;
+            margin-bottom: 20px;
+        }
+        .honeycomb img {
+            width: 36px;
+            height: 36px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
+            cursor: pointer;
+            outline: 2px solid transparent;
+        }
+        .honeycomb img:hover {
+            transform: scale(1.4) translateY(-3px) rotate(5deg);
+            filter: drop-shadow(0 10px 15px rgba(88,166,255,0.4));
+            z-index: 10;
+        }
+
         /* Animations */
         @keyframes slideInLeft { from { transform: translateX(-50px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
         @keyframes slideInUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
@@ -586,10 +609,11 @@
             </ul>
 
             <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color);">
-                <h3 style="font-size: 16px; margin-bottom: 16px; color: var(--text-primary);">Skills</h3>
-                <a href="https://skillicons.dev" target="_blank" style="display: block; transition: transform 0.3s; animation: pulseGlow 3s infinite alternate;">
-                    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vite,tailwind,bootstrap,nodejs,express,php,python,cpp,mysql,mongodb,git,github,docker,linux,postman,vscode,figma,vercel&perline=5&theme=dark" alt="Skills" style="width: 100%; border-radius: 8px; filter: drop-shadow(0 0 10px rgba(88,166,255,0.2));" />
-                </a>
+                <h3 style="font-size: 16px; margin-bottom: 16px; color: var(--text-primary);">Skills Matrix</h3>
+                <!-- Unique Honeycomb Shape Injection -->
+                <div class="honeycomb" id="sidebar-skills">
+                    <!-- Images will be JS generated here in unique shapes -->
+                </div>
             </div>
         </aside>
 
@@ -815,6 +839,19 @@
                 }
             `;
             document.head.appendChild(style);
+
+            // --- Generate Honeycomb Sidebar Skills (Unique Hexagon Shape) ---
+            const allSkillsStr = "html,css,js,ts,react,nextjs,vite,redux,tailwind,bootstrap,materialui,nodejs,express,nestjs,php,laravel,python,django,cpp,java,spring,c,dotnet,go,rust,aws,azure,gcp,firebase,supabase,mysql,mongodb,postgresql,redis,git,github,gitlab,docker,kubernetes,linux,ubuntu,windows,postman,graphql,nginx,vscode,visualstudio,idea,figma,vercel,netlify";
+            const skillArray = allSkillsStr.split(',');
+            const sidebarSkills = document.getElementById('sidebar-skills');
+            
+            // Generate distinct image tags so clip-path can make them hexagons!
+            skillArray.forEach(skill => {
+                const img = document.createElement('img');
+                img.src = `https://skillicons.dev/icons?i=${skill}&theme=dark`;
+                img.title = skill.toUpperCase();
+                sidebarSkills.appendChild(img);
+            });
         });
     </script>
 </body>
