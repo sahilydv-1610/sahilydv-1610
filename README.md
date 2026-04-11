@@ -2,6 +2,10 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
 
 <p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115853333-28f00100-a433-11eb-8bd3-a75d5060ee6e.gif" alt="Coding on PC" width="400" />
+</p>
+
+<p align="center">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=24&pause=1000&color=58A6FF&center=true&vCenter=true&width=535&lines=CSE+Student+%40+Lovely+Professional+Uni;Transforming+Ideas+Into+Web+Apps;Modern+JavaScript+%26+React+Developer;Passionate+about+Animations+%26+Clean+Code" alt="Typing SVG" />
   </a>
