@@ -17,7 +17,7 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=00B4D8&center=true&vCenter=true&width=600&height=60&lines=✨+Quick+Facts+About+Me+✨" alt="Typing SVG" />
 </div>
 
-<p align="center">
+<p>
   🔭 I’m currently building robust, full-stack <b>React & Node</b> applications.<br><br>
   🌱 I’m continuously mastering modern <b>JavaScript environments</b> and advanced web animations.<br><br>
   💡 I love integrating <b>AI into web platforms</b> (like Google's Gemini!).<br><br>
@@ -82,4 +82,8 @@
 
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&customColorList=000000,005f73,0a9396,94d2bd,e9d8a6&height=100&section=footer" width="100%"/>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=sahilydv-1610&label=Profile%20Views&color=00B4D8&style=for-the-badge" alt="Profile Views" />
 </p>
