@@ -2,10 +2,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=sahilydv-1610&label=Profile%20Views&color=58a6ff&style=for-the-badge" alt="Profile Views" />
-</p>
-
-<p align="center">
   <img src="https://user-images.githubusercontent.com/73097560/115853333-28f00100-a433-11eb-8bd3-a75d5060ee6e.gif" alt="Coding on PC" width="400" />
 </p>
 
@@ -81,6 +77,9 @@
   </a>
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=100&section=footer" width="100%"/>
+</p> -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=sahilydv-1610&label=Profile%20Views&color=58a6ff&style=for-the-badge" alt="Profile Views" />
 </p>
