@@ -2,7 +2,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=200&section=header&text=Hello,%20I'm%20Sahil!&fontSize=50&fontColor=c9d1d9&animation=twinkling&fontAlignY=38&desc=Full%20Stack%20Developer&descAlignY=55&descAlign=50" width="100%"/>
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115853333-28f00100-a433-11eb-8bd3-a75d5060ee6e.gif" alt="Coding on PC" width="400" />
+  <img src="https://camo.githubusercontent.com/dd237b558739902670df3b0af1212e3f569cf70a75710fd4d0201b961e12d267/68747470733a2f2f692e67697068792e636f6d2f6d656469612f76312e59326c6b505463354d4749334e6a457861334e79633235796347313263474a7a62334272636a467365545179616e4e7a6257316d646e4a685a7a4a6d4e4770766147733364435a6c634431324d563970626e526c636d35686246396e61575a66596e6c666157516d593351395a772f4c3152317476493973766b495777705659722f67697068792e676966" alt="Coding on PC" width="400" />
 </p>
 
 <p align="center">
