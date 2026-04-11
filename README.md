@@ -26,15 +26,13 @@
 ### 🛠️ Tech Stack & Languages (Honeycomb):
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=nextjs,vite,redux,tailwind,bootstrap,materialui&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=jquery,sass,less,webpack,babel,yarn,npm&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,php,laravel,python,django,cpp&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=java,spring,c,dotnet,go,rust,aws,azure,gcp&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=firebase,supabase,mysql,mongodb,postgresql,redis,git,github&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=gitlab,githubactions,docker,kubernetes,linux,ubuntu,windows&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=nginx,postman,graphql,vscode,visualstudio,idea&theme=dark" /><br>
-    <img src="https://skillicons.dev/icons?i=figma,md,vercel,netlify,angular&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=html,css,js,ts&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=react,vite,redux,tailwind,bootstrap&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=materialui,jquery,sass,npm,yarn,md&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=nodejs,express,php,python,cpp,c,java&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=mysql,mongodb,firebase,vercel,netlify,figma&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=git,github,gitlab,githubactions,linux&theme=dark" /><br>
+    <img src="https://skillicons.dev/icons?i=ubuntu,windows,vscode,postman&theme=dark" />
   </a>
 </p>
 
